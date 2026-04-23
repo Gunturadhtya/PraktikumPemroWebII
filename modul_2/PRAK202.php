@@ -45,6 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             <input type="submit">
         </form>
+        <h2>Output: </h2>
         <p>
             <?php
                 echo $values["nama"] . "<br>"; 

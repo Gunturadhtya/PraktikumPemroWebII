@@ -21,7 +21,7 @@ sort($nama);
         <title>Soal 1 Modul 2</title>
     </head>
     <body>
-        <form action="soal-1.php" method="post">
+        <form method="post">
             Name: 1 <input type="text" name="name1"><br>
             Name: 2 <input type="text" name="name2"><br>
             Name: 3 <input type="text" name="name3"><br>

@@ -22,6 +22,22 @@
                 <a href="modul_1/soal-5.php">Soal 5</a>
             </li>
         </ul>
+
+        <h2>Modul 2</h2>
+        <ul>
+            <li>
+                <a href="modul_2/soal-1.php">Soal 1</a>
+            </li>
+            <li>
+                <a href="modul_2/soal-2.php">Soal 2</a>
+            </li>
+            <li>
+                <a href="modul_2/soal-3.php">Soal 3</a>
+            </li>
+            <li>
+                <a href="modul_2/soal-4.php">Soal 4</a>
+            </li>
+        </ul>
         
     </body>
 </html>

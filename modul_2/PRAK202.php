@@ -6,12 +6,15 @@ $fields = [
     "gender" => "Jenis Kelamin"
 ];
 
+$no_empty = true;
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     foreach ($fields as $key => $label) {
         $input = trim($_POST[$key]);
         
         if (empty($input)) {
             $errors[$key] = "$label tidak boleh kosong";
+            $no_empty = false;
         } else {
             $values[$key] = $input;
         }
@@ -48,9 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <h2>Output: </h2>
         <p>
             <?php
+            if ($no_empty) {
                 echo $values["nama"] . "<br>"; 
                 echo $values["nim"] . "<br>"; 
                 echo $values["gender"] . "<br>"; 
+            }
             ?>
         </p>
     </body>

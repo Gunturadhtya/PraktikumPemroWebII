@@ -15,10 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     };
 
     $konversi = match ($ke) {
-        'Fahrenheit' => ($celsius * 9/5) + 32,
-        'Rheamur' => $celsius * 4/5,
-        'Kelvin' => $celsius + 273.15,
-        default => $celsius
+        'Fahrenheit' => (($celsius * 9/5) + 32) . " &#8457;",
+        'Rheamur' => $celsius * 4/5 . " R",
+        'Kelvin' => $celsius + 273.15 . " &#8490;",
+        default => $celsius . " &#8451;"
     };
 }
 

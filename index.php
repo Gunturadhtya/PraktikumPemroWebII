@@ -38,6 +38,25 @@
                 <a href="modul_2/PRAK204.php">Soal 4</a>
             </li>
         </ul>
+
+        <h2>Modul 3</h2>
+        <ul>
+            <li>
+                <a href="modul_3/PRAK301.php">Soal 1</a>
+            </li>
+            <li>
+                <a href="modul_3/PRAK302.php">Soal 2</a>
+            </li>
+            <li>
+                <a href="modul_3/PRAK303.php">Soal 3</a>
+            </li>
+            <li>
+                <a href="modul_3/PRAK304.php">Soal 4</a>
+            </li>
+            <li>
+                <a href="modul_3/PRAK305.php">Soal 5</a>
+            </li>
+        </ul>
         
     </body>
 </html>

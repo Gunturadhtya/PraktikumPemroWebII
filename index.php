@@ -57,6 +57,19 @@
                 <a href="modul_3/PRAK305.php">Soal 5</a>
             </li>
         </ul>
+
+        <h2>Modul 4</h2>
+        <ul>
+            <li>
+                <a href="modul_4/PRAK401.php">Soal 1</a>
+            </li>
+            <li>
+                <a href="modul_4/PRAK402.php">Soal 2</a>
+            </li>
+            <li>
+                <a href="modul_4/PRAK403.php">Soal 3</a>
+            </li>
+        </ul>
         
     </body>
 </html>

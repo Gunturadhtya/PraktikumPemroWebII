@@ -1,34 +1,30 @@
 <?php
     $dataMahasiswa = [
-        [
+        '2101001' => [
             'Nama' => 'Andi',
-            'NIM' => '2101001',
             'Nilai UTS' => 87,
             'Nilai UAS' => 65
         ],
-        [
+        '2101002' => [
             'Nama' => 'Budi',
-            'NIM' => '2101002',
             'Nilai UTS' => 76,
             'Nilai UAS' => 79
         ],
-        [
+        '2101003' => [
             'Nama' => 'Tono',
-            'NIM' => '2101003',
             'Nilai UTS' => 50,
             'Nilai UAS' => 41
         ],
-        [
+        '2101004' => [
             'Nama' => 'Jessica',
-            'NIM' => '2101004',
             'Nilai UTS' => 60,
             'Nilai UAS' => 75
         ]
     ];
 
-    foreach ($dataMahasiswa as $index => $mahasiswa) {
+    foreach ($dataMahasiswa as $nim => $mahasiswa) {
         $nilaiAkhir = ($mahasiswa['Nilai UTS'] * 0.4) + ($mahasiswa['Nilai UAS'] * 0.6);
-        $dataMahasiswa[$index]['Nilai Akhir'] = $nilaiAkhir;
+        $dataMahasiswa[$nim]['Nilai Akhir'] = $nilaiAkhir;
 
         if ($nilaiAkhir >= 80) {
             $huruf = 'A';
@@ -41,7 +37,7 @@
         } else {
             $huruf = 'E';
         }
-        $dataMahasiswa[$index]['Huruf'] = $huruf;
+        $dataMahasiswa[$nim]['Huruf'] = $huruf;
     }
 ?>
 
@@ -62,14 +58,14 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($dataMahasiswa as $mahasiswa): ?>
+                <?php foreach ($dataMahasiswa as $nim => $mahasiswa): ?>
                     <tr>
-                        <td><?php echo htmlspecialchars($mahasiswa['Nama']); ?></td>
-                        <td><?php echo htmlspecialchars($mahasiswa['NIM']); ?></td>
-                        <td><?php echo htmlspecialchars($mahasiswa['Nilai UTS']); ?></td>
-                        <td><?php echo htmlspecialchars($mahasiswa['Nilai UAS']); ?></td>
-                        <td><?php echo htmlspecialchars($mahasiswa['Nilai Akhir']); ?></td>
-                        <td><?php echo htmlspecialchars($mahasiswa['Huruf']); ?></td>
+                        <td><?php echo $mahasiswa['Nama']; ?></td>
+                        <td><?php echo $nim; ?></td>
+                        <td><?php echo $mahasiswa['Nilai UTS']; ?></td>
+                        <td><?php echo $mahasiswa['Nilai UAS']; ?></td>
+                        <td><?php echo $mahasiswa['Nilai Akhir']; ?></td>
+                        <td><?php echo $mahasiswa['Huruf']; ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

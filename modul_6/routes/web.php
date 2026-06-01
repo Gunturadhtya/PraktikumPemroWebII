@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ExperienceController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomeController::class)->name('home');
+Route::get('/profile', ProfileController::class)->name('profile');
+Route::get('/experience/{slug}', [ExperienceController::class, 'show'])->name('experience.show');

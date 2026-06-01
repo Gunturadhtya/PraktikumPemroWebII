@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class ProfileController extends Controller
 {
@@ -11,6 +12,17 @@ class ProfileController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('profile');
+        $user = User::with([
+            'hobbies',
+            'skills',
+            'events' => function ($query) {
+                $query->orderByDesc('date')->take(4);
+            }
+        ])->firstOrFail();
+
+        return view('profile', [
+            'title' => 'Profile - ' . $user->name,
+            'user' => $user
+        ]);
     }
 }

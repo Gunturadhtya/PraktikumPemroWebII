@@ -15,7 +15,6 @@ class HomeController extends Controller
         $user = User::firstOrFail(); 
 
         return view('home', [
-            'title' => 'Home - ' . $user->name,
             'user' => $user
         ]);
     }

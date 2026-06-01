@@ -1,4 +1,4 @@
-<x-layout title="Home - Portfolio">
+<x-layout>
     <h1>Home</h1>
 
     <p><strong>Nama:</strong> {{ $user->name }}</p>

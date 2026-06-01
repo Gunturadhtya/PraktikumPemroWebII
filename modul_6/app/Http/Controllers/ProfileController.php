@@ -21,7 +21,6 @@ class ProfileController extends Controller
         ])->firstOrFail();
 
         return view('profile', [
-            'title' => 'Profile - ' . $user->name,
             'user' => $user
         ]);
     }

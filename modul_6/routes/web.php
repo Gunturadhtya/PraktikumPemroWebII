@@ -7,4 +7,4 @@ use App\Http\Controllers\ExperienceController;
 
 Route::get('/', HomeController::class)->name('home');
 Route::get('/profile', ProfileController::class)->name('profile');
-Route::get('/experience/{slug}', [ExperienceController::class, 'show'])->name('experience.show');
+Route::get('/experience/{id}', [ExperienceController::class,'show'])->name('experience.show');

@@ -10,6 +10,8 @@ services:
       - ./:/var/www
     networks:
       - modul6_net
+    depends_on:
+      - db
 
   web:
     image: nginx:alpine

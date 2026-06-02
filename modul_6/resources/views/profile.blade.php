@@ -2,7 +2,7 @@
     <div id="scroll-container"
         class="container mx-auto px-4 max-w-5xl h-[calc(100vh-6rem)] overflow-y-auto snap-y snap-mandatory scroll-smooth hide-scrollbar relative">
 
-        <section class="snap-start min-h-full flex flex-col md:flex-row gap-6 items-center justify-center">
+        <section id="profile" class="snap-start min-h-full flex flex-col md:flex-row gap-6 items-center justify-center">
             <div class="shrink-0">
                 <img src="{{ asset($user->img_path) }}" alt="{{ $user->name }}"
                     class="w-[150px] h-[150px] rounded-full object-cover border border-gray-200 shadow-sm">
@@ -16,7 +16,8 @@
             </div>
         </section>
 
-        <section class="snap-start min-h-full flex flex-col md:flex-row gap-10 items-center justify-center py-8">
+        <section id="skills"
+            class="snap-start min-h-full flex flex-col md:flex-row gap-10 items-center justify-center py-8">
             <div class="flex-1 w-full">
                 <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b pb-2">Skill</h2>
                 @if($user->skills->isEmpty())
@@ -33,7 +34,8 @@
             </div>
         </section>
 
-        <section class="snap-start min-h-full flex flex-col md:flex-row gap-10 items-center justify-center py-8">
+        <section id="hobbies"
+            class="snap-start min-h-full flex flex-col md:flex-row gap-10 items-center justify-center py-8">
             <div class="flex-1 w-full">
                 <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b pb-2">Hobi</h2>
                 @if($user->hobbies->isEmpty())
@@ -50,7 +52,7 @@
             </div>
         </section>
 
-        <section class="snap-start min-h-full flex flex-col justify-center py-8">
+        <section id="experiences" class="snap-start min-h-full flex flex-col justify-center py-8">
             <h2 class="text-2xl font-bold mb-6 text-gray-800 w-full">Pengalaman Paling Berkesan</h2>
             @if($user->events->isEmpty())
                 <p class="text-gray-500 italic">Belum ada pengalaman kuliah yang tercatat.</p>

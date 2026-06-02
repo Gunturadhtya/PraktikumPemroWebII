@@ -15,3 +15,15 @@ docker-compose up -d
 npm install
 npm run dev
 ```
+
+4. wait till finish
+```
+docker compose logs -f app
+```
+
+5. migrate database
+```
+docker compose exec app php artisan migrate:fresh --seed
+```
+
+website is on localhost:8000

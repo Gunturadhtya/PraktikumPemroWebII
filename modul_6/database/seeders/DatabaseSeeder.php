@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
                 'img_path' => '/images/genbi.jpeg',
                 'description' => 'keluar dari zona nyaman dan alhamdulillah lolos, GACOR',
                 'url' => null,
-                'date' => Carbon::create(2025, 9, 10),
+                'date' => Carbon::create(2026, 4, 24),
             ]
         );
 
@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
                 'img_path' => '/images/ctf.jpeg',
                 'description' => 'akhirnya kesampean juga minat CTF, dari maba saya ingin nyoba CTF tapi karna bingung ngapain aja (karena kategorinya banyak) jadi, pindah haluan ke Competitive Programming',
                 'url' => null,
-                'date' => Carbon::create(2026, 6, 13),
+                'date' => Carbon::create(2026, 5, 13),
             ]
         );
 

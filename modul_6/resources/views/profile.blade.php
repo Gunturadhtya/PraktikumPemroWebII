@@ -1,7 +1,8 @@
 <x-layout>
-    <div class="container mx-auto px-4 py-8 max-w-5xl">
+    <div
+        class="container mx-auto px-4 max-w-5xl h-[calc(100vh-6rem)] overflow-y-auto snap-y snap-mandatory scroll-smooth hide-scrollbar">
 
-        <section class="flex flex-col md:flex-row gap-6 items-center md:items-start mb-10">
+        <section class="snap-start min-h-full flex flex-col md:flex-row gap-6 items-center justify-center">
             <div class="shrink-0">
                 <img src="{{ asset($user->img_path) }}" alt="{{ $user->name }}"
                     class="w-[150px] h-[150px] rounded-full object-cover border border-gray-200 shadow-sm">
@@ -15,8 +16,8 @@
             </div>
         </section>
 
-        <section class="flex flex-col md:flex-row gap-10 mb-12">
-            <div class="flex-1">
+        <section class="snap-start min-h-full flex flex-col md:flex-row gap-10 items-center justify-center py-8">
+            <div class="flex-1 w-full">
                 <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b pb-2">Skill</h2>
                 @if($user->skills->isEmpty())
                     <p class="text-gray-500 italic">Belum ada skill yang ditambahkan.</p>
@@ -30,8 +31,10 @@
                     </ul>
                 @endif
             </div>
+        </section>
 
-            <div class="flex-1">
+        <section class="snap-start min-h-full flex flex-col md:flex-row gap-10 items-center justify-center py-8">
+            <div class="flex-1 w-full">
                 <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b pb-2">Hobi</h2>
                 @if($user->hobbies->isEmpty())
                     <p class="text-gray-500 italic">Belum ada hobi yang ditambahkan.</p>
@@ -47,12 +50,12 @@
             </div>
         </section>
 
-        <section>
-            <h2 class="text-2xl font-bold mb-6 text-gray-800">Pengalaman Paling Berkesan</h2>
+        <section class="snap-start min-h-full flex flex-col justify-center py-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 w-full">Pengalaman Paling Berkesan</h2>
             @if($user->events->isEmpty())
                 <p class="text-gray-500 italic">Belum ada pengalaman kuliah yang tercatat.</p>
             @else
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
                     @foreach($user->events as $event)
                         <a href="{{ route('experience.show', $event->id) }}"
                             class="group block h-full focus:outline-none rounded-lg">
@@ -63,7 +66,8 @@
                                 <div class="p-4 flex flex-col flex-grow">
                                     <h3
                                         class="text-lg font-bold text-gray-900 mt-0 group-hover:text-blue-600 transition-colors">
-                                        {{ $event->title }}</h3>
+                                        {{ $event->title }}
+                                    </h3>
                                     <span class="text-sm text-gray-500 mt-1 mb-2">{{ $event->date->format('d M Y') }}</span>
                                     <p class="text-sm text-gray-700 line-clamp-3">
                                         {{ $event->description }}
@@ -75,5 +79,6 @@
                 </div>
             @endif
         </section>
+
     </div>
 </x-layout>

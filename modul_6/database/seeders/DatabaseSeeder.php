@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
                 'img_path' => '/images/genbi.jpeg',
                 'description' => 'keluar dari zona nyaman dan alhamdulillah lolos, GACOR',
                 'url' => null,
-                'date' => Carbon::create(2026, 4, 10),
+                'date' => Carbon::create(2025, 9, 10),
             ]
         );
 
@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
                 'img_path' => '/images/sctv.png',
                 'description' => 'gak nyangka tiba-tiba diwawancarai oleh SCTV, jujur gugup pas para dekan dan wakil dekan ikut nanya juga',
                 'url' => 'https://youtu.be/QgsHeq1Ls8k?si=882eDbV-6C-fediF',
-                'date' => Carbon::create(2026, 1, 20),
+                'date' => Carbon::create(2026, 11, 29),
             ]
         );
 
@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
                 'img_path' => '/images/ctf.jpeg',
                 'description' => 'akhirnya kesampean juga minat CTF, dari maba saya ingin nyoba CTF tapi karna bingung ngapain aja (karena kategorinya banyak) jadi, pindah haluan ke Competitive Programming',
                 'url' => null,
-                'date' => Carbon::create(2026, 1, 20),
+                'date' => Carbon::create(2026, 6, 13),
             ]
         );
 

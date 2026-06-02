@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             ['title' => 'TOP 10 GAMESEED 2025'],
             [
                 'img_path' => '/images/wasaka.jpeg',
-                'description' => 'Placeholder Description',
+                'description' => 'pertama kali lolos final lomba, tidak diduga loh padahal cuma coba-coba saja, tapi sayangnya gugur di pitching game',
                 'url' => 'https://wasakagames.itch.io/a-match-made-in-dungeon',
                 'date' => Carbon::create(2025, 9, 15),
             ]
@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
             ['title' => 'Wawancara Beasiswa Bank Indonesia'],
             [
                 'img_path' => '/images/genbi.jpeg',
-                'description' => 'Placeholder Description',
+                'description' => 'keluar dari zona nyaman dan alhamdulillah lolos, GACOR',
                 'url' => null,
                 'date' => Carbon::create(2026, 4, 10),
             ]
@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
             ['title' => 'Wawancara Wasaka Robotik oleh SCTV Kalimantan Selatan'],
             [
                 'img_path' => '/images/sctv.png',
-                'description' => 'Placeholder Description',
+                'description' => 'gak nyangka tiba-tiba diwawancarai oleh SCTV, jujur gugup pas para dekan dan wakil dekan ikut nanya juga',
                 'url' => 'https://youtu.be/QgsHeq1Ls8k?si=882eDbV-6C-fediF',
                 'date' => Carbon::create(2026, 1, 20),
             ]
@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
             ['title' => 'Workshop Capture The Flag PSTI'],
             [
                 'img_path' => '/images/ctf.jpeg',
-                'description' => 'Placeholder Description',
+                'description' => 'akhirnya kesampean juga minat CTF, dari maba saya ingin nyoba CTF tapi karna bingung ngapain aja (karena kategorinya banyak) jadi, pindah haluan ke Competitive Programming',
                 'url' => null,
                 'date' => Carbon::create(2026, 1, 20),
             ]
@@ -70,24 +70,20 @@ class DatabaseSeeder extends Seeder
         if ($user->skills()->count() === 0) {
             $user->skills()->createMany([
                 [
-                    'name' => 'Bahasa Pemrograman Java',
-                    'description' => 'Placeholder Description',
-                ],
-                [
-                    'name' => 'Bahasa Pemrograman C++',
-                    'description' => 'Placeholder Description',
+                    'name' => 'Bahasa Pemrograman Imperative',
+                    'description' => 'Bisa membaca dan memahami semua bahasa pemrograman yang mendukung paradigma Imperative seperti C++, Java, atau Kotlin',
                 ],
                 [
                     'name' => 'Linux',
-                    'description' => 'Placeholder Description',
+                    'description' => 'Menggunakan Linux sebagai OS sehari-hari',
                 ],
                 [
                     'name'=> 'Bahasa Assembly',
-                    'description'=> 'Placeholder Description',
+                    'description'=> 'Bisa membaca dan membuat program dari bahasa assembly, khusus di linux saja',
                 ],
                 [
                     'name'=> 'Reverse Engineering',
-                    'description'=> 'Placeholder Description',
+                    'description'=> 'Bisa melakukan patching, konversi ke bahasa pemrograman atau melakukan binary exploitation',
                 ]
             ]);
         }
@@ -96,15 +92,15 @@ class DatabaseSeeder extends Seeder
             $user->hobbies()->createMany([
                 [
                     'name' => 'Competitive Programming',
-                    'description' => 'Placeholder Description',
+                    'description' => 'Tiap minggu pasti gawe soal Dynamic Programming',
                 ],
                 [
                     'name' => 'Capture The Flag, PWN(Binary Exploitation)',
-                    'description' => 'Placeholder Description',
+                    'description' => 'Tiap pagi gawe CTF, tapi masih dalam masa belajar',
                 ],
                 [
                     'name' => 'Doom Scrolling',
-                    'description' => 'Placeholder Description',
+                    'description' => 'Tiap hari menjadi professional doom scroller dengan jam terbang minimal 100 jam perbulan',
                 ],
             ]);
         }

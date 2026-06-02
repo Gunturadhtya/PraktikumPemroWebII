@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
             ['nim' => '2410817310003'], 
             [
                 'name' => 'Muhammad Guntur Ricky Adhitya',
-                'img_path' => '/images/profile-placeholder.jpg',
+                'img_path' => '/images/profile.jpeg',
                 'major' => 'Teknologi Informasi',
             ]
         );
@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         $gameseed = Event::firstOrCreate(
             ['title' => 'TOP 10 GAMESEED 2025'],
             [
-                'img_path' => '/images/event-placeholder.jpg',
+                'img_path' => '/images/wasaka.jpeg',
                 'description' => 'Placeholder Description',
                 'url' => 'https://wasakagames.itch.io/a-match-made-in-dungeon',
                 'date' => Carbon::create(2025, 9, 15),
@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
         $biScholarship = Event::firstOrCreate(
             ['title' => 'Wawancara Beasiswa Bank Indonesia'],
             [
-                'img_path' => '/images/event-placeholder.jpg',
+                'img_path' => '/images/genbi.jpeg',
                 'description' => 'Placeholder Description',
                 'url' => null,
                 'date' => Carbon::create(2026, 4, 10),
@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
         $wasakaRobotik = Event::firstOrCreate(
             ['title' => 'Wawancara Wasaka Robotik oleh SCTV Kalimantan Selatan'],
             [
-                'img_path' => '/images/event-placeholder.jpg',
+                'img_path' => '/images/sctv.png',
                 'description' => 'Placeholder Description',
                 'url' => 'https://youtu.be/QgsHeq1Ls8k?si=882eDbV-6C-fediF',
                 'date' => Carbon::create(2026, 1, 20),
@@ -53,7 +53,7 @@ class DatabaseSeeder extends Seeder
         $wsCtf = Event::firstOrCreate(
             ['title' => 'Workshop Capture The Flag PSTI'],
             [
-                'img_path' => '/images/event-placeholder.jpg',
+                'img_path' => '/images/ctf.jpeg',
                 'description' => 'Placeholder Description',
                 'url' => null,
                 'date' => Carbon::create(2026, 1, 20),

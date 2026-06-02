@@ -7,7 +7,7 @@
                     aria-label="Lihat profil lengkap {{ $user->name }}">
 
                     <img src="{{ asset($user->img_path) }}" alt="{{ $user->name }}"
-                        class="w-[150px] h-[150px] rounded-full object-cover border border-gray-200 shadow-sm cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-md hover:border-blue-400">
+                        class="w-[300px] h-[300px] rounded-full object-cover border border-gray-200 shadow-sm cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-md hover:border-blue-400">
 
                 </a>
             </div>

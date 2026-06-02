@@ -3,7 +3,42 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
+@font-face {
+    font-family: 'Limelight';
+    src: url('../fonts/Limelight-Regular.ttf') format('truetype');
+    /* src: url('/fonts/CustomHeading.woff2') format('woff2'); <- Recommended */
+    font-weight: 400;
+    /* Adjust to match the specific TTF weight */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../fonts/Gelasio-VariableFont_wght.ttf') format('truetype');
+    /* src: url('/fonts/CustomHeading.woff2') format('woff2'); <- Recommended */
+    font-weight: 400;
+    /* Adjust to match the specific TTF weight */
+    font-style: normal;
+    font-display: swap;
+}
+
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    /* Define Arial as the default sans-serif font */
+    --font-sans: 'Gelasio', sans-serif;
+
+    /* Register the custom font as a design token */
+    --font-heading: 'Limelight', sans-serif;
+}
+
+@layer base {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-heading);
+    }
 }

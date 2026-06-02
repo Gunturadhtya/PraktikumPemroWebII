@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - UID=${UID:-1000}
     container_name: modul6_app
     restart: unless-stopped
     working_dir: /var/www

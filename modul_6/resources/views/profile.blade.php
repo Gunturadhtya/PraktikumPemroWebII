@@ -1,6 +1,6 @@
 <x-layout>
-    <div
-        class="container mx-auto px-4 max-w-5xl h-[calc(100vh-6rem)] overflow-y-auto snap-y snap-mandatory scroll-smooth hide-scrollbar">
+    <div id="scroll-container"
+        class="container mx-auto px-4 max-w-5xl h-[calc(100vh-6rem)] overflow-y-auto snap-y snap-mandatory scroll-smooth hide-scrollbar relative">
 
         <section class="snap-start min-h-full flex flex-col md:flex-row gap-6 items-center justify-center">
             <div class="shrink-0">
@@ -81,4 +81,57 @@
         </section>
 
     </div>
+
+    <button id="snap-next-btn"
+        class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-white hover:bg-gray-50 text-blue-600 p-3 rounded-full shadow-lg border border-gray-100 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 animate-bounce cursor-pointer"
+        aria-label="Scroll ke halaman berikutnya">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+        </svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('scroll-container');
+            const button = document.getElementById('snap-next-btn');
+            if (!container || !button) return;
+
+            const sections = container.querySelectorAll('section');
+
+            button.addEventListener('click', () => {
+                const containerTop = container.getBoundingClientRect().top;
+
+                const currentSection = Array.from(sections).find(section => {
+                    const rect = section.getBoundingClientRect();
+                    return Math.abs(rect.top - containerTop) < 10;
+                });
+
+                if (currentSection) {
+                    const nextSection = currentSection.nextElementSibling;
+                    if (nextSection && nextSection.tagName === 'SECTION') {
+                        nextSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+
+            const observerOptions = {
+                root: container,
+                threshold: 0.6
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target === sections[sections.length - 1]) {
+                            button.classList.add('opacity-0', 'pointer-events-none');
+                        } else {
+                            button.classList.remove('opacity-0', 'pointer-events-none');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
 </x-layout>

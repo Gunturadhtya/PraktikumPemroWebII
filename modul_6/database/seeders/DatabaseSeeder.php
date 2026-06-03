@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $user = User::firstOrCreate(
-            ['nim' => '2410817310003'], 
+            ['nim' => '2410817310003'],
             [
                 'name' => 'Muhammad Guntur Ricky Adhitya',
                 'img_path' => '/images/profile.jpeg',
@@ -64,7 +64,7 @@ class DatabaseSeeder extends Seeder
             $gameseed->id,
             $biScholarship->id,
             $wasakaRobotik->id,
-            $wsCtf->id
+            $wsCtf->id,
         ]);
 
         if ($user->skills()->count() === 0) {
@@ -78,13 +78,13 @@ class DatabaseSeeder extends Seeder
                     'description' => 'Menggunakan Linux sebagai OS sehari-hari',
                 ],
                 [
-                    'name'=> 'Bahasa Assembly',
-                    'description'=> 'Bisa membaca dan membuat program dari bahasa assembly, khusus di linux saja',
+                    'name' => 'Bahasa Assembly',
+                    'description' => 'Bisa membaca dan membuat program dari bahasa assembly, khusus di linux saja',
                 ],
                 [
-                    'name'=> 'Reverse Engineering',
-                    'description'=> 'Bisa melakukan patching, konversi ke bahasa pemrograman atau melakukan binary exploitation',
-                ]
+                    'name' => 'Reverse Engineering',
+                    'description' => 'Bisa melakukan patching, konversi ke bahasa pemrograman atau melakukan binary exploitation',
+                ],
             ]);
         }
 

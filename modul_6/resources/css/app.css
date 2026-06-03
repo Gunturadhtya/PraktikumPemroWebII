@@ -6,9 +6,7 @@
 @font-face {
     font-family: 'Limelight';
     src: url('../fonts/Limelight-Regular.ttf') format('truetype');
-    /* src: url('/fonts/CustomHeading.woff2') format('woff2'); <- Recommended */
     font-weight: 400;
-    /* Adjust to match the specific TTF weight */
     font-style: normal;
     font-display: swap;
 }
@@ -16,18 +14,14 @@
 @font-face {
     font-family: 'Gelasio';
     src: url('../fonts/Gelasio-VariableFont_wght.ttf') format('truetype');
-    /* src: url('/fonts/CustomHeading.woff2') format('woff2'); <- Recommended */
     font-weight: 400;
-    /* Adjust to match the specific TTF weight */
     font-style: normal;
     font-display: swap;
 }
 
 @theme {
-    /* Define Arial as the default sans-serif font */
     --font-sans: 'Gelasio', sans-serif;
 
-    /* Register the custom font as a design token */
     --font-heading: 'Limelight', sans-serif;
 }
 

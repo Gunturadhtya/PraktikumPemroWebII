@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             ['title' => 'TOP 10 GAMESEED 2025'],
             [
                 'img_path' => '/images/wasaka.jpeg',
-                'description' => 'pertama kali lolos final lomba, tidak diduga loh padahal cuma coba-coba saja, tapi sayangnya gugur di pitching game',
+                'description' => "Pencapaian ini menjadi momen yang sangat berkesan karena ini adalah pertama kalinya berhasil menembus babak final dalam sebuah perlombaan berskala besar. Awalnya, partisipasi dalam ajang GAMESEED 2025 ini benar-benar hanya sekadar coba-coba untuk menguji kemampuan pengembangan game lewat karya 'A Match Made in Dungeon', sehingga lolos ke jajaran TOP 10 adalah sebuah kejutan yang luar biasa menyenangkan.\n\nNamun, perjalanan manis tersebut harus terhenti di tahap pitching game. Kurangnya jam terbang dalam mempresentasikan dan menjual ide di hadapan para juri membuat tim harus menerima kenyataan untuk gugur di fase krusial ini. Meskipun sayangnya harus tereliminasi, kegagalan ini memberikan pelajaran berharga mengenai pentingnya kemampuan komunikasi di dunia industri kreatif.",
                 'url' => 'https://wasakagames.itch.io/a-match-made-in-dungeon',
                 'date' => Carbon::create(2025, 9, 15),
             ]
@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
             ['title' => 'Wawancara Beasiswa Bank Indonesia'],
             [
                 'img_path' => '/images/genbi.jpeg',
-                'description' => 'keluar dari zona nyaman dan alhamdulillah lolos, GACOR',
+                'description' => "Keputusan untuk mendaftar Beasiswa Bank Indonesia ini merupakan salah satu langkah terbesar untuk berani menantang diri sendiri dan keluar dari zona nyaman. Mengikuti seleksi beasiswa bergengsi tentu membutuhkan persiapan mental yang tidak sedikit, terutama saat harus berhadapan langsung dengan para pewawancara untuk meyakinkan mereka mengenai kelayakan diri.\n\nAlhamdulillah, semua usaha untuk mendobrak batasan diri tersebut membuahkan hasil yang sangat luar biasa, benar-benar GACOR! Lolos seleksi ini tidak hanya menjadi pembuktian atas kemampuan diri, tetapi juga membuka peluang besar untuk terus berkembang dan berkontribusi lebih luas melalui komunitas GenBI ke depannya.",
                 'url' => null,
                 'date' => Carbon::create(2026, 4, 24),
             ]
@@ -44,9 +44,9 @@ class DatabaseSeeder extends Seeder
             ['title' => 'Wawancara Wasaka Robotik oleh SCTV Kalimantan Selatan'],
             [
                 'img_path' => '/images/sctv.png',
-                'description' => 'gak nyangka tiba-tiba diwawancarai oleh SCTV, jujur gugup pas para dekan dan wakil dekan ikut nanya juga',
+                'description' => "Momen peliputan oleh SCTV Kalimantan Selatan ini terjadi begitu tak terduga dan menjadi salah satu pengalaman yang paling mendebarkan. Sama sekali tidak menyangka bahwa riset dan kegiatan yang dilakukan bersama tim Wasaka Robotik akan mendapat sorotan dari stasiun televisi, sehingga persiapan wawancara pun dilakukan dengan sangat spontan.\n\nKetegangan semakin memuncak ketika sesi wawancara berlangsung, karena secara mengejutkan para jajaran dekan dan wakil dekan turut hadir dan ikut memberikan pertanyaan teknis di depan kamera. Walaupun jujur sangat gugup saat harus menjawab rentetan pertanyaan tersebut, momen ini pada akhirnya menjadi kebanggaan tersendiri karena bisa menunjukkan karya robotik secara langsung.",
                 'url' => 'https://youtu.be/QgsHeq1Ls8k?si=882eDbV-6C-fediF',
-                'date' => Carbon::create(2026, 11, 29),
+                'date' => Carbon::create(2025, 11, 29),
             ]
         );
 
@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
             ['title' => 'Workshop Capture The Flag PSTI'],
             [
                 'img_path' => '/images/ctf.jpeg',
-                'description' => 'akhirnya kesampean juga minat CTF, dari maba saya ingin nyoba CTF tapi karna bingung ngapain aja (karena kategorinya banyak) jadi, pindah haluan ke Competitive Programming',
+                'description' => "Mengikuti Workshop Capture The Flag (CTF) yang diadakan oleh PSTI ini rasanya seperti menuntaskan rasa penasaran yang sudah terpendam sejak lama. Sejak masih berstatus mahasiswa baru, ada minat yang kuat terhadap dunia keamanan siber dan sangat ingin mencoba bermain CTF, namun terhalang oleh kebingungan karena banyaknya kategori yang harus dipelajari seperti Web, Crypto, hingga Pwn.\n\nKarena rasa bingung tidak tahu harus mulai dari mana saat maba tersebut, haluan akhirnya diputar untuk lebih fokus mendalami Competitive Programming guna mengasah logika algoritma. Kini, melalui workshop ini, akhirnya ada wadah dan arahan yang jelas untuk kembali menyalurkan minat awal terhadap CTF dengan pendekatan yang lebih terstruktur.",
                 'url' => null,
                 'date' => Carbon::create(2026, 5, 13),
             ]
